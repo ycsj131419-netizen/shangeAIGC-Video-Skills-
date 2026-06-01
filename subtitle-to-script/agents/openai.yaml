@@ -1,0 +1,4 @@
+interface:
+  display_name: "Subtitle to Script"
+  short_description: "Convert complete subtitles into polished scripts"
+  default_prompt: "Use $subtitle-to-script to turn a complete subtitle file into a polished full script."
