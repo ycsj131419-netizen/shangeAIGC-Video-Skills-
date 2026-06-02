@@ -4,6 +4,56 @@
 
 ## Skills
 
+### `video-lapai-notes`
+
+**用途：用 Gemini full-video 理解视频，并输出结构化中文拉片笔记。**
+
+当你提供本地视频、YouTube URL、录屏或参考视频，或提出“视频识别”“视频理解”“视频拉片”“镜头拆解”“时间线分析”“不要只抽帧”等需求时使用。
+
+适合处理：
+
+- 连续时间线视频理解。
+- 镜头、动作、字幕/台词、音效/BGM、画面节奏拆解。
+- 输出标准中文拉片表格。
+- 发现仅靠截帧容易遗漏的动作、表情、转场和音频细节。
+
+安装依赖：
+
+```bash
+python -m pip install -r video-lapai-notes/requirements.txt
+```
+
+配置 API：
+
+```bash
+# macOS / Linux
+export GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
+```
+
+```powershell
+# Windows PowerShell
+[Environment]::SetEnvironmentVariable("GEMINI_API_KEY", "YOUR_GEMINI_API_KEY", "User")
+$env:GEMINI_API_KEY=[Environment]::GetEnvironmentVariable("GEMINI_API_KEY","User")
+```
+
+检查环境：
+
+```bash
+python video-lapai-notes/scripts/check_setup.py
+```
+
+命令行测试：
+
+```bash
+python video-lapai-notes/scripts/analyze_video.py "path/to/video.mp4" -o analysis.json
+```
+
+说明：
+
+- 不需要额外 Codex 插件。
+- API Key 需要用户自己配置，不应写入仓库或聊天记录。
+- `ffmpeg` / `ffprobe` 是可选依赖，用于本地媒体辅助处理；Gemini full-video 分析本身不强制依赖它们。
+
 ### `video-reverse-prompts`
 
 **用途：视频复刻 / 拉片分析 / 镜头反推提示词。**
