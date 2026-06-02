@@ -29,8 +29,11 @@ Produce a structured Chinese analysis that fully understands a reference video o
 
 4. Write the user's requested output.
    - Default to Chinese.
-   - If the user asks for 拉片笔记, include a Markdown table with columns: 镜号, 景别/角度, 运动, 画面内容, 音频, 时长(秒).
-   - Then add a 总结描述 with relevant subsections: 画面风格, 叙事结构, 镜头语言, 音频风格, and optionally 复刻要点.
+   - If the user asks for 拉片笔记, 视频反推, 视频复刻, or 反推提示词, the 拉片笔记 section MUST use the strict standard template below before writing prompts.
+   - The standard 拉片笔记 MUST include the exact Markdown table columns: 镜号, 景别/角度, 运动, 画面内容, 音频, 时长(秒).
+   - The 音频 cell MUST be split into labeled lines whenever possible: **BGM**, **音效**, **配音/字幕**. If one item is absent, state it briefly (e.g. 无明显音效). Do not leave audio generic.
+   - After the table, MUST add `## 总结描述` with these exact subsections: `### 画面风格`, `### 纹理与材质`, `### 光影与环境`, `### 动作逻辑`, `### 音频风格`.
+   - Do not replace these required summary subsections with 叙事结构, 镜头语言, or 复刻要点. Those may be added only as extra subsections after the required five.
    - Read `references/lapai-template.md` when the user asks for the standard table format or when no custom template is provided.
    - If the user asks for actual video-generation prompts, use the analysis to write master prompts, shot-by-shot prompts, negative prompts, and platform notes.
 
@@ -57,7 +60,7 @@ Produce a structured Chinese analysis that fully understands a reference video o
 ## Output Discipline
 
 - Preserve the user's requested format exactly when they provide one.
+- When the user asks for 拉片笔记 or when this skill prepares prompt reverse-engineering, strictly preserve the standard 拉片笔记 format from `references/lapai-template.md`: six-column table first, then the five required summary subsections.
 - Keep each table row concrete and production-useful: subject, action, setting, composition, motion, audio, and duration.
 - Avoid overly generic adjectives. Replace "高级感" with observable traits such as "冷色办公室灯光, 浅景深, 玻璃反光, 高对比夜景".
 - Include limitations only when they materially affect accuracy, such as missing audio transcription or unreadable subtitles.
-

@@ -18,11 +18,14 @@ Use this default structure when the user asks for 拉片笔记 and does not prov
 ### 画面风格
 [描述真实可见的视觉风格、材质、光线、色彩、AI生成特征或实拍质感。]
 
-### 叙事结构
-[说明开端、发展、转折、高潮、收束，或广告/短剧/混剪的段落逻辑。]
+### 纹理与材质
+[描述人物皮肤、毛发、服装、道具、场景表面、AI生成材质或实拍质感。]
 
-### 镜头语言
-[说明景别组合、机位、运镜、剪辑节奏、手机屏幕/字幕卡/特写等关键视觉符号。]
+### 光影与环境
+[说明光线方向、冷暖色、景深、背景环境、空间氛围、反光/阴影等。]
+
+### 动作逻辑
+[说明人物/动物/物体动作是否连贯，变化过程、肢体碰撞、嘴型同步、物理逻辑和叙事因果。]
 
 ### 音频风格
 [说明BGM、配音、字幕、环境声、音效和音画同步。]
@@ -35,4 +38,4 @@ Use this default structure when the user asks for 拉片笔记 and does not prov
 - Rows describe motion over time, not just static frames.
 - Dialogue/subtitles are marked as exact only when readable or reliably transcribed.
 - Summary names the video's emotional and structural logic.
-
+- Summary always includes 画面风格, 纹理与材质, 光影与环境, 动作逻辑, 音频风格.
