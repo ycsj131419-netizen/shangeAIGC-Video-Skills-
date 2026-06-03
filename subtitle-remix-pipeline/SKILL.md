@@ -28,6 +28,7 @@ Do not deliver the final adapted script until all gates pass:
 - Cross-story/trailer residue is excluded or clearly marked.
 - Adapted work is substantially original, not a renamed or lightly rewritten copy.
 - Full adaptation means full episode count unless the user explicitly asks for a sample or compression.
+- Script density must roughly match the source. If the source averages about 40-50 subtitle lines per episode, each adapted episode must contain comparable dramatic content: multiple action beats, dialogue turns, reactions, transitions, and a hook. A few-sentence episode summary is an outline, not a completed script.
 - Final self-score is at least `90/100`.
 - Long final output is written to a local `.md` file and imported to Feishu/Lark by default.
 
@@ -35,6 +36,7 @@ Automatic fail:
 
 - Outputting only 3-5 sample episodes when the user asked for the full adaptation.
 - Arbitrarily reducing a 70+ episode source to a small number of episodes.
+- Outputting full episode count but making each episode only a few lines long when the source episodes contain dozens of subtitle lines.
 - Speaker labels are visibly wrong, including self-address errors.
 - A character or name appears that was not in the source or the new adaptation plan.
 - The protagonist's money-making path does not match the chosen era/industry.
@@ -169,14 +171,22 @@ For long sources, write the full deliverable to a `.md` file. Do not rely on cha
 
 If the source has a known episode count, output the same adapted episode count unless the user explicitly requests compression or expansion.
 
+Density rule:
+
+- Estimate average source subtitle lines per episode.
+- For final adapted script, target a similar number of playable script lines per episode.
+- A normal adapted episode should include at least one scene heading, character list, 8-15 visual/action beats, 15-30 dialogue or OS/screen-text turns, and a clear episode hook.
+- If time or context requires staged delivery, label the output as a batch draft and continue expanding; do not call it final until all episodes meet the density target.
+
 ### 7. Self-Review And Revision
 
 Score using this 100-point gate:
 
 - Source coverage and episode integrity: 15
 - Speaker attribution and source integrity: 15
+- Episode script density and completeness: 10
 - Hook extraction and audience value: 10
-- Original worldview and causality: 15
+- Original worldview and causality: 10
 - Character goal, skill, and active choices: 15
 - Conflict escalation and payoff: 10
 - Setup/rule consistency: 10
@@ -218,4 +228,3 @@ Include:
 - Why it is not merely a renamed copy.
 - Final score.
 - Feishu/Lark document URL for long deliverables.
-

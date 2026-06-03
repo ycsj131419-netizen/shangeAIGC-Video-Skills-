@@ -33,6 +33,8 @@ Use this checklist before final delivery.
 ## Delivery
 
 - Full episode count delivered unless user requested sample/compression.
+- Each episode's script density roughly matches the source subtitle density; a few lines per episode is not acceptable as a final script.
+- Episodes contain scene headings, character lists, frequent action beats, enough dialogue/OS/screen-text turns, and a real hook.
 - Local Markdown file created for long output.
 - Feishu/Lark docx imported by default.
 - Final score is at least 90.
