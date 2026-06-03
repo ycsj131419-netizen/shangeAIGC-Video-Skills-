@@ -1,0 +1,4 @@
+display_name: Subtitle Remix Pipeline
+short_description: 字幕校准到原创改编完整剧本的一条龙流程。
+default_prompt: 根据字幕文件校准源剧本，再完成原创改编剧本；保留覆盖检查、说话人校验、自查评分，并上传飞书。
+
