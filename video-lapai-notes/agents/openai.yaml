@@ -1,7 +1,7 @@
 interface:
-  display_name: "Gemini 视频拉片"
-  short_description: "用 Gemini full-video 理解视频，并输出结构化中文拉片笔记。"
-  default_prompt: "Use video-lapai-notes to analyze this video with Gemini full-video understanding, then output a detailed Chinese 拉片笔记."
+  display_name: "视频拉片笔记"
+  short_description: "用 Gemini 与本地兜底工具读取视频，输出中文拉片、台词和批次提示词"
+  default_prompt: "使用 video-lapai-notes 分析这个视频，输出中文拉片笔记；如果我要复刻，请按批次输出完整提示词。"
 
 policy:
   allow_implicit_invocation: true

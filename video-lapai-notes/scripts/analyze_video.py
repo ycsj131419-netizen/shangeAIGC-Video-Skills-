@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Analyze a local video or URL with Gemini full-video understanding."""
+"""Analyze a local video or YouTube URL with Gemini full-video understanding."""
 
 from __future__ import annotations
 
@@ -12,9 +12,10 @@ from pathlib import Path
 
 
 DEFAULT_PROMPT = (
-    "完整理解这个视频，不要只做抽帧描述。请按连续时间线分析：画面内容、镜头切换、"
-    "人物或主体动作、表情和反应、台词或字幕、音效/BGM、画面节奏、关键信息、"
-    "容易遗漏的细节。请输出带时间戳的分段拆解，并区分事实和推断。"
+    "完整理解这个视频，不要只做抽帧描述。请按连续时间线分析："
+    "画面内容、镜头切换、人物或主体动作、表情和反应、台词或字幕、"
+    "音效/BGM、画面节奏、关键信息、容易遗漏的细节。"
+    "请输出带时间戳的分段拆解，并区分事实和推断。"
 )
 
 
