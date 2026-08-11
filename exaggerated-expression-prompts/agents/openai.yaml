@@ -1,0 +1,7 @@
+﻿interface:
+  display_name: "搞怪夸张表情提示词"
+  short_description: "生成短视频、表情包和AI动画用的夸张抽象表情提示词。"
+  default_prompt: "用 $exaggerated-expression-prompts 把这个情绪做成搞怪夸张表情提示词。"
+
+policy:
+  allow_implicit_invocation: true
